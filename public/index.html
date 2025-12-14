@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>制作会社さま向け｜LPコーディング＋GA4/GTM実装パートナー</title>
+  <meta
+    name="description"
+    content="制作会社・マーケ会社さま向け。FigmaデザインからのLPコーディングと、GA4／GTMによるコンバージョン計測の整備まで一気通貫で対応する外部パートナーのポートフォリオサイトです。"
+  />
+  <!-- デザイントークン & 本番CSS（Sassコンパイル後） -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="header__logo">鈴木 裕太 / LP Coding & Analytics</h1>
+      <nav class="header__nav">
+        <ul class="nav-list">
+          <li>
+            <a
+              href="#services"
+              class="nav-list__link js-nav"
+              data-gtm="lp_nav_service_click"
+              data-gtm-event="nav_click"
+              data-gtm-section="hero"
+              data-gtm-id="nav_services"
+            >
+              サービス
+            </a>
+          </li>
+          <li>
+            <a
+              href="#cases"
+              class="nav-list__link js-nav"
+              data-gtm="lp_nav_case_click"
+              data-gtm-event="nav_click"
+              data-gtm-section="hero"
+              data-gtm-id="nav_cases"
+            >
+              実績
+            </a>
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="nav-list__link js-nav"
+              data-gtm="lp_nav_about_click"
+              data-gtm-event="nav_click"
+              data-gtm-section="hero"
+              data-gtm-id="nav_about"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="nav-list__link nav-list__link--cta js-nav"
+              data-gtm="lp_nav_contact_click"
+              data-gtm-event="nav_click"
+              data-gtm-section="hero"
+              data-gtm-id="nav_contact"
+            >
+              お問い合わせ
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HERO（Canva寄せのコピー＋Gemini寄せの構造） -->
+    <section id="hero" class="hero">
+      <div class="hero__bg">
+        <!-- 背景写真はPexels/Unsplash想定。data-photo-idで差し替え制御用 -->
+        <img
+          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80"
+          alt=""
+          class="hero__bg-img"
+          data-photo-id="hero_bg"
+        />
+        <div class="hero__overlay"></div>
+      </div>
+
+      <div class="l-container hero__content">
+        <h2 class="hero__title">
+          制作会社さま向け｜LPコーディング＋GA4/GTM実装の外部パートナー
+        </h2>
+        <p class="hero__lead">
+          数字で追えるLPを増やし、クライアントの成果を最大化するために。<br />
+          FigmaなどのデザインからのHTML/CSS実装と、GA4／GTMによるコンバージョン計測の整備まで、一気通貫で対応します。
+        </p>
+        <p class="hero__name">
+          鈴木 裕太｜LPコーディング＋GA4/GTM実装（フリーランス Web制作者）
+        </p>
+
+        <div class="hero__actions">
+          <a
+            href="#contact"
+            class="btn btn--primary js-cta"
+            data-gtm="lp_contact_primary_click"
+            data-gtm-event="cta_click"
+            data-gtm-section="hero"
+            data-gtm-id="hero_primary"
+          >
+            制作会社さまのご相談はこちら
+          </a>
+          <a
+            href="https://chatwork.com/33x2y71ikaasg"
+            target="_blank"
+            rel="noopener"
+            class="btn btn--secondary js-cta"
+            data-gtm="lp_chatwork_click"
+            data-gtm-event="cta_click"
+            data-gtm-section="hero"
+            data-gtm-id="hero_secondary"
+          >
+            Chatworkで相談する
+          </a>
+        </div>
+
+        <div class="hero__metrics">
+          <ul class="metric-list">
+            <li class="metric-list__item">
+              対応領域：LPコーディング／小規模サイト構築／GA4・GTM／GSC
+            </li>
+            <li class="metric-list__item">
+              対応ツール：HTML・CSS(SCSS)・WordPress・STUDIO・GA4・GTM
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. こんなお悩みはありませんか？（Gemini寄せ） -->
+    <section id="problem_solution" class="section section--light">
+      <div class="l-container">
+        <div class="section__header">
+          <h2 class="section__title">こんなお悩みはありませんか？</h2>
+          <p class="section__subtitle">
+            コーディングと計測まわりだけ、外部パートナーに任せる選択肢があります。
+          </p>
+        </div>
+
+        <div class="problem-solution-grid">
+          <div class="problem-card">
+            <h3 class="problem-card__title">制作チーム側のよくある課題</h3>
+            <ul class="check-list check-list--problem">
+              <li>
+                デザインは揃っているのに、コーディングと計測のリソースが足りず案件が詰まりがち。
+              </li>
+              <li>
+                GA4／GTMが「わかる人」に集中していて、小さめ案件ほど後回しになってしまう。
+              </li>
+              <li>
+                LPは公開しているが、どの導線からどれくらいCVしているかが曖昧なまま。
+              </li>
+              <li>
+                コーディングとタグ設定を別々に外注していて、連携や確認コストが膨らんでいる。
+              </li>
+            </ul>
+          </div>
+
+          <div class="solution-card">
+            <h3 class="solution-card__title">カバーできる範囲</h3>
+            <ul class="check-list check-list--solution">
+              <li>
+                Figmaなどのデザインデータから、意図を崩さないLP／小規模サイトのHTML・CSSコーディング。
+              </li>
+              <li>
+                LP公開と同時に、GA4／GTMでのコンバージョン計測がスタートできる状態まで整備。
+              </li>
+              <li>
+                既存GA4／GTM環境の棚卸しと、不要タグの整理・主要イベントの再設計。
+              </li>
+              <li>
+                チームで把握できるよう、設定内容をテキストで共有（簡易ドキュメント化）。
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="u-text-center u-mt-6">
+          <a
+            href="#contact"
+            class="btn btn--primary js-cta"
+            data-gtm-event="cta_click"
+            data-gtm-section="problem_solution"
+            data-gtm-id="ps_section"
+          >
+            まずは相談してみる
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 提供サービス（Canva寄せの内容を、Geminiのカード構造に載せる） -->
+    <section id="services" class="section">
+      <div class="l-container">
+        <h2 class="section__title">提供サービス</h2>
+
+        <div class="service-grid">
+          <!-- Service 1 -->
+          <article class="card service-card">
+            <div class="service-card__image">
+              <img
+                src="img/service_coding.png"
+                alt="コーディング作業イメージ"
+                data-photo-id="service_coding"
+              />
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">
+                01. LP／小規模サイトのコーディング
+              </h3>
+              <p class="service-card__desc">
+                レスポンシブ対応はもちろん、デザインの意図を崩さずに実装することを重視しています。
+                PC／SP両方で「読みやすく・迷わない」LPをHTML／SCSSで組み上げます。
+              </p>
+              <ul class="bullet-list">
+                <li>Figma／XD などのデザインカンプからの実装</li>
+                <li>レスポンシブ対応（スマホ・タブレット・PC）</li>
+                <li>既存デザインルール・コンポーネントへの準拠</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Service 2 -->
+          <article class="card service-card">
+            <div class="service-card__image">
+              <img
+                src="img/service_analytics.png"
+                alt="データ分析イメージ"
+                data-photo-id="service_analytics"
+              />
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">
+                02. GA4／GTMによる計測設計・実装
+              </h3>
+              <p class="service-card__desc">
+                「LPは公開されているのに、数値がよく分からない」を解消するための計測整備です。  
+                追いたいコンバージョンと導線に合わせて、イベント設計〜実装まで対応します。
+              </p>
+              <ul class="bullet-list">
+                <li>GA4 プロパティの初期設定</li>
+                <li>GTM
+                  コンテナの設計と主要イベントタグの実装</li>
+                <li>お問い合わせ／資料請求ボタンなどのCV計測設定</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Service 3 -->
+          <article class="card service-card">
+            <div class="service-card__image">
+              <img
+                src="img/service_refactor_flow.png"
+                alt="整理・整備イメージ"
+                data-photo-id="service_refactor"
+              />
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">
+                03. 既存サイトの計測リファクタ＆軽微改修
+              </h3>
+              <p class="service-card__desc">
+                すでに動いているサイトの「ごちゃっとした計測まわり」を整理します。  
+                既存タグの棚卸しから不要イベント削除、軽微なHTML/CSS改修までまとめて対応可能です。
+              </p>
+              <ul class="bullet-list">
+                <li>現行GA4／GTM設定の棚卸し・可視化</li>
+                <li>不要タグ・イベントの整理</li>
+                <li>フォーム送信や特定ボタンの追加計測</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ご依頼〜納品の流れ（Canva版の構成に合わせる） -->
+    <section id="flow" class="section section--light flow">
+      <div class="l-container">
+        <h2 class="section__title">ご依頼〜納品の流れ</h2>
+
+        <div class="flow-timeline">
+          <div class="flow-step">
+            <div class="flow-number">
+              1
+            </div>
+            <h4>ヒアリング</h4>
+            <p>要件や目的をお伺いします</p>
+          </div>
+          <div class="flow-step">
+            <div class="flow-number">
+              2
+            </div>
+            <h4>お見積もり</h4>
+            <p>スコープと納期を確認</p>
+          </div>
+          <div class="flow-step">
+            <div class="flow-number">
+              3
+            </div>
+            <h4>制作開始</h4>
+            <p>コーディング・計測実装</p>
+          </div>
+          <div class="flow-step">
+            <div class="flow-number">
+              4
+            </div>
+            <h4>確認・修正</h4>
+            <p>動作確認とフィードバック</p>
+          </div>
+          <div class="flow-step">
+            <div class="flow-number">
+              5
+            </div>
+            <h4>納品</h4>
+            <p>完成データとドキュメント</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Before / After（Gemini寄せ） -->
+    <section id="before_after" class="section">
+      <div class="l-container">
+        <h2 class="section__title">ご依頼前と後で、何が変わるか</h2>
+
+        <div class="ba-container">
+          <div class="ba-block ba-block--before">
+            <h3 class="ba-block__title">Before</h3>
+            <ul class="bullet-list">
+              <li>
+                LPは公開しているが、「どの導線から・どれくらいCVしているか」がはっきり分からない。
+              </li>
+              <li>
+                GA4／GTMが一部メンバーだけが触れる“ブラックボックス”になっている。
+              </li>
+              <li>
+                実装とタグ設定が、忙しいメンバーの時間外作業に乗っかりがち。
+              </li>
+            </ul>
+          </div>
+
+          <div class="ba-arrow">→</div>
+
+          <div class="ba-block ba-block--after">
+            <h3 class="ba-block__title">After</h3>
+            <ul class="bullet-list">
+              <li>
+                LP公開時点で主要コンバージョンの計測が完了した状態でスタートできる。
+              </li>
+              <li>
+                GA4／GTMの設定内容がテキストで共有され、「何をどこで計測しているか」をチーム全体で把握できる。
+              </li>
+              <li>
+                LPのコーディングと計測まわりを外部に出し、社内メンバーは構成・デザイン・クライアント対応に集中できる。
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="u-text-center u-mt-6">
+          <a
+            href="#contact"
+            class="btn btn--primary js-cta"
+            data-gtm-event="cta_click"
+            data-gtm-section="before_after"
+            data-gtm-id="ba_section"
+          >
+            お問い合わせへ移動する
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. 実績（レイアウトはカード、内容は美容サロン案件ベース） -->
+    <section id="cases" class="section section--light">
+      <div class="l-container">
+        <h2 class="section__title">制作・計測の実績例</h2>
+
+        <div class="cases-wrapper">
+          <article class="case-card">
+            <div class="case-card__img">
+              <img
+                src="img/case_salon_reception.png"
+                alt="美容サロンWebサイトイメージ"
+                data-photo-id="case_salon"
+              />
+            </div>
+            <div class="case-card__content">
+              <h3 class="case-card__title">
+                美容サロンの新規Webサイト構築＋計測整備
+              </h3>
+              <dl class="case-meta">
+                <div class="case-meta__row">
+                  <dt>クライアント</dt>
+                  <dd>美容サロン（個人経営／予約制）</dd>
+                </div>
+                <div class="case-meta__row">
+                  <dt>担当範囲</dt>
+                  <dd>情報設計整理、新規HP構築、GA4・GSC初期設定</dd>
+                </div>
+              </dl>
+              <p class="case-card__desc">
+                オーナーさまがご自身で更新しやすいよう、ブロックエディタでの管理とカスタムテンプレートを併用。<br />
+                予約導線（外部予約システム）のクリック計測をGA4で取得できるように整理し、「どのページから予約が生まれているか」を可視化しました。
+              </p>
+              <p class="case-card__note">
+                ※ 公開可能な範囲での概要のみ記載しています。
+              </p>
+            </div>
+          </article>
+
+          <!-- 追加の実績カードができたら、ここに同じ構造で増やす -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. About（プロフィール：Gemini版の構造＋うみちゃんの来歴テキスト前提） -->
+    <section id="about" class="section">
+      <div class="l-container">
+        <div class="about-grid">
+          <div class="about-grid__text">
+            <h2 class="section__title u-text-left">プロフィール</h2>
+            <p class="about-desc">
+              現在は会社員として非鉄金属系の業務に従事しつつ、副業でLP制作とGA4／GTM実装の案件をお受けしています。<br />
+              散らかった数字やタグを整理して、「どの数字を見ればいいか」を明確にすることが得意です。
+            </p>
+
+            <div class="about-info">
+              <h4>得意なこと</h4>
+              <ul>
+                <li>Figmaなどのデザイン意図を崩さないLP／Webサイトの実装</li>
+                <li>GA4／GTMを用いたコンバージョン計測の設計と整理</li>
+                <li>サイト構成と計測の両方を見たうえでの「追うべき指標」の言語化</li>
+              </ul>
+            </div>
+
+            <div class="about-info">
+              <h4>働き方・コミュニケーション</h4>
+              <ul>
+                <li>平日 8:00〜19:00 は本業のため、電話対応は原則不可</li>
+                <li>メール／Chatworkでの非同期連絡を基本としています</li>
+                <li>オンラインMTGは平日夜間・土日で調整可能です</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="about-grid__img">
+            <img
+              src="img/profile_workspace.png"
+              alt="プロフィールイメージ"
+              data-photo-id="about_portrait"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FAQ（Canva寄せの内容をシンプルなQ&Aで） -->
+    <section id="faq" class="section section--light">
+      <div class="l-container">
+        <h2 class="section__title">よくある質問</h2>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-question" data-gtm="lp_faq_toggle">対応可能な案件の規模はどれくらいですか？</summary>
+            <div class="faq-answer">
+              LP1ページから小規模コーポレートサイト（5〜10ページ程度）まで対応可能です。大規模案件の場合は、ご相談の上で進め方を検討させていただきます。
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question" data-gtm="lp_faq_toggle">納期はどれくらいかかりますか？</summary>
+            <div class="faq-answer">
+              LP1ページのコーディング＋GA4/GTM実装で、通常1〜2週間が目安です。案件の複雑さやボリュームによって変動しますので、まずはお気軽にご相談ください。
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question" data-gtm="lp_faq_toggle">料金体系を教えてください</summary>
+            <div class="faq-answer">
+              プロジェクトごとのお見積もり制となります。ヒアリング後、作業範囲と納期を確認した上で、明確な見積もりを提示いたします。
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question" data-gtm="lp_faq_toggle">コミュニケーションツールは何を使いますか？</summary>
+            <div class="faq-answer">
+              Chatwork、Slack、メールなど、お客様のご希望に合わせて柔軟に対応いたします。レスポンスは原則24時間以内を心がけています。
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question" data-gtm="lp_faq_toggle">既存サイトの修正のみでも依頼できますか？</summary>
+            <div class="faq-answer">
+              はい、もちろん可能です。軽微なコード修正や、計測設定の見直しなど、スポットでのご依頼にも対応しております。
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Contact（Canva寄せのトーン＋Gemini寄せの構造） -->
+    <section id="contact" class="section">
+      <div class="l-container l-container--narrow">
+        <h2 class="section__title">制作会社・マーケ会社さまのご相談はこちらから</h2>
+        <p class="u-text-center u-mb-6">
+          「LP1本だけコーディングと計測をお願いしたい」「既存クライアントのGA4／GTMまわりだけ整理してほしい」など、軽めのご相談からで大丈夫です。<br />
+          案件の背景と現状のお困りごとを、分かる範囲でお聞かせください。
+        </p>
+
+        <p class="u-text-center u-mb-4">ご相談はメールまたはChatworkにて承ります。</p>
+
+        <div class="hero__actions">
+          <a
+            href="https://chatwork.com/33x2y71ikaasg"
+            target="_blank"
+            rel="noopener"
+            class="btn btn--primary js-cta"
+            data-gtm="lp_chatwork_click"
+            data-gtm-event="cta_click"
+            data-gtm-section="contact"
+            data-gtm-id="contact_chatwork"
+          >
+            Chatworkで相談する
+          </a>
+          <a
+            href="mailto:zukiissu@gmail.com"
+            class="btn btn--secondary js-cta"
+            data-gtm-event="cta_click"
+            data-gtm-section="contact"
+            data-gtm-id="contact_email"
+          >
+            メールで相談する
+          </a>
+        </div>
+
+        <div class="contact-direct">
+          <p>
+            メール：
+            <a
+              href="mailto:zukiissu@gmail.com"
+              data-gtm-event="email_click"
+              data-gtm-section="contact"
+              data-gtm-id="contact_email_text"
+            >
+              zukiissu@gmail.com
+            </a>
+          </p>
+          <p>
+            Chatwork：
+            <a
+              href="https://chatwork.com/33x2y71ikaasg"
+              target="_blank"
+              rel="noopener"
+              data-gtm-event="chatwork_click"
+              data-gtm-section="contact"
+              data-gtm-id="contact_chatwork_text"
+            >
+              33x2y71ikaasg
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="l-container">
+      <nav class="footer__nav">
+        <ul class="nav-list nav-list--footer">
+          <li>
+            <a
+              href="#services"
+              class="js-nav"
+              data-gtm-event="nav_click"
+              data-gtm-section="footer"
+              data-gtm-id="nav_services"
+            >
+              サービス
+            </a>
+          </li>
+          <li>
+            <a
+              href="#cases"
+              class="js-nav"
+              data-gtm-event="nav_click"
+              data-gtm-section="footer"
+              data-gtm-id="nav_cases"
+            >
+              実績
+            </a>
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="js-nav"
+              data-gtm-event="nav_click"
+              data-gtm-section="footer"
+              data-gtm-id="nav_about"
+            >
+              プロフィール
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="js-nav"
+              data-gtm-event="nav_click"
+              data-gtm-section="footer"
+              data-gtm-id="nav_contact"
+            >
+              お問い合わせ
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p class="footer__copyright">
+        © 2025 鈴木裕太. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

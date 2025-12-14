@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-site-public",
+  "version": "1.0.0",
+  "description": "Static portfolio landing page with SCSS build and GA4/GTM-ready markup.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/scss/style.scss public/css/style.css --no-source-map",
+    "sass:watch": "sass src/scss/style.scss public/css/style.css --watch",
+    "serve": "browser-sync start --server public --files 'public/css/*.css' 'public/**/*.html' --port 4173 --open 'index.html'",
+    "dev": "npm-run-all --parallel sass:watch serve",
+    "build": "npm run sass"
+  },
+  "keywords": ["portfolio", "landing-page", "scss", "ga4", "gtm"],
+  "author": "Yuta Suzuki",
+  "license": "ISC",
+  "type": "commonjs",
+  "homepage": "https://example.com/",
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.94.2"
+  }
+}
